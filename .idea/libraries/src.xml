@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="src">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Assignments/Kd-Trees/src/send1.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Assignments/Kd-Trees/src/send.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
