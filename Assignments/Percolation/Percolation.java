@@ -1,6 +1,5 @@
 /*
-* Grade: 98.42/100
-* Correctness:  37/38 tests passed
+* Correctness:  38/38 tests passed
 * Memory:       8/8 tests passed
 * Timing:       20/20 tests passed
 *
@@ -12,7 +11,7 @@
 *		* One that connects last row to bottom and is able to indicate percolation.
 * 		* That other is used to answer isFull queries.
 *
-* Further Improvements:
+* Further Improvements - Bonus:
 * 	-Use an array of bytes (4 bits) to control multiple (4) states instead of a second UF object.
 *
 *
