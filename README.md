@@ -11,9 +11,9 @@
 1. W1
    * Union-Find
    * Analysis of Algorithms
-     - Ex1
-     - Ex2
-     - [Ex3](https://github.com/PedroASA/AlgsI/blob/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex3.py)
+     - [Ex1]()
+     - [Ex2]()
+     - [Ex3](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex3)
 2. W2
 3. W3
 4. W4
