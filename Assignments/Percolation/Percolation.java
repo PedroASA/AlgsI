@@ -1,4 +1,8 @@
 /*
+<<<<<<< Updated upstream
+=======
+* Grade: 100/100
+>>>>>>> Stashed changes
 * Correctness:  38/38 tests passed
 * Memory:       8/8 tests passed
 * Timing:       20/20 tests passed

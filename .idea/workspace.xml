@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7335f03f-0cbd-41d8-a82e-411f64bd1ed4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1lNy5bETdb9hTaLZYRQ2sE1kb8v" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="true" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="Application.Percolation">
+    <configuration name="Percolation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Percolation" />
+      <module name="Assignments" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PercolationStats" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PercolationStats" />
+      <module name="Assignments" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Percolation" />
+        <item itemvalue="Application.PercolationStats" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7335f03f-0cbd-41d8-a82e-411f64bd1ed4" name="Default Changelist" comment="" />
+      <created>1607451661357</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607451661357</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="171" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608207791197">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state x="171" y="54" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1293.741@67.27.1293.741" timestamp="1608207791197" />
+    <state x="432" y="198" width="552" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608204985020">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state x="432" y="198" width="552" height="396" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1293.741@67.27.1293.741" timestamp="1608204985020" />
+    <state x="446" y="146" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607473884206">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state x="446" y="146" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1293.741@67.27.1293.741" timestamp="1607473884206" />
+    <state x="496" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1608208786216">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state x="496" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1293.741@67.27.1293.741" timestamp="1608208786216" />
+    <state width="1247" height="175" key="GridCell.Tab.0.bottom" timestamp="1608063384968">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state width="1247" height="175" key="GridCell.Tab.0.bottom/67.27.1293.741@67.27.1293.741" timestamp="1608063384968" />
+    <state width="1247" height="175" key="GridCell.Tab.0.center" timestamp="1608063384966">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state width="1247" height="175" key="GridCell.Tab.0.center/67.27.1293.741@67.27.1293.741" timestamp="1608063384966" />
+    <state width="1247" height="175" key="GridCell.Tab.0.left" timestamp="1608063384965">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state width="1247" height="175" key="GridCell.Tab.0.left/67.27.1293.741@67.27.1293.741" timestamp="1608063384965" />
+    <state width="1247" height="175" key="GridCell.Tab.0.right" timestamp="1608063384967">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state width="1247" height="175" key="GridCell.Tab.0.right/67.27.1293.741@67.27.1293.741" timestamp="1608063384967" />
+    <state x="385" y="291" width="646" height="213" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1607453114639">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state x="385" y="291" width="646" height="213" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/67.27.1293.741@67.27.1293.741" timestamp="1607453114639" />
+    <state x="0" y="27" width="618" height="741" key="find.popup" timestamp="1608061173974">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state x="0" y="27" width="618" height="741" key="find.popup/67.27.1293.741@67.27.1293.741" timestamp="1608061173974" />
+    <state x="376" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1608054048855">
+      <screen x="67" y="27" width="1293" height="741" />
+    </state>
+    <state x="376" y="89" width="672" height="678" key="search.everywhere.popup/67.27.1293.741@67.27.1293.741" timestamp="1608054048855" />
+  </component>
+</project>
