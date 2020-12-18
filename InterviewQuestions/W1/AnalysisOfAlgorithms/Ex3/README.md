@@ -1,6 +1,7 @@
 ### Egg drop 
 <hr>
 Suppose that you have an nn-story building (with floors 1 through **N**) and plenty of eggs. An egg breaks if it is dropped from floor __T__ or higher and does not break otherwise. Your goal is to devise a strategy to determine the value of  __T__ given the following limitations on the number of eggs and tosses:
+<b>
 
 * Version 0: 1 egg and ≤ **T** tosses. 
 * Version 1:  ∼1lg**N** eggs and  ∼1lg**N** tosses. 
