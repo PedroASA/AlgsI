@@ -12,7 +12,7 @@
    * Union-Find
    * Analysis of Algorithms
      - [Ex1](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex1)
-     - [Ex2]()
+     - [Ex2](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex2)
      - [Ex3](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex3)
 2. W2
 3. W3
