@@ -16,7 +16,7 @@
    * Analysis of Algorithms
      - [3SUM](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex1)
      - [Bitônic Array](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex2)
-     - [Egg Drop](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex3) __(Incomplete!)__
+     - [Egg Drop](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex3) <span style="color:red">__Incomplete!__</span>
 2. W2
 3. W3
 4. W4
