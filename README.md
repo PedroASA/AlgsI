@@ -10,6 +10,9 @@
 ### Interview Questions
 1. W1
    * Union-Find
+     - [Ex1](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/Union-Find/Ex1)
+     - [Ex2](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/Union-Find/Ex1)
+     - [Ex3](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/Union-Find/Ex1)
    * Analysis of Algorithms
      - [Ex1](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex1)
      - [Ex2](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex2)
