@@ -10,9 +10,9 @@
 ### Interview Questions
 1. W1
    * Union-Find
-     - [Ex1](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/Union-Find/Ex1)
-     - [Ex2](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/Union-Find/Ex1)
-     - [Ex3](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/Union-Find/Ex1)
+     - [Social Connectivity](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/UnionFind/EX1)
+     - [Union Find with max](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/Union-Find/EX2)
+     - [Union Find with delete](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/Union-Find/EX3)
    * Analysis of Algorithms
      - [3SUM](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex1)
      - [Bitônic Array](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex2)
