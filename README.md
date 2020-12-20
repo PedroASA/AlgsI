@@ -1,4 +1,4 @@
-## [Coursera/Princeton Algs I] (https://www.coursera.org/learn/algorithms-part1)
+## [Coursera/Princeton Algs I](https://www.coursera.org/learn/algorithms-part1)
 
 ### Assignments
   1. Percolation
