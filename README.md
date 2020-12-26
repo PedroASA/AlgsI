@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## [Coursera/Princeton Algs I](https://www.coursera.org/learn/algorithms-part1)
 
 ### Assignments
@@ -22,3 +23,6 @@
 4. W4
 5. W5
 6. W6
+=======
+
+>>>>>>> master-reset-2
