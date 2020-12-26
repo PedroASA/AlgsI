@@ -2,11 +2,11 @@
 ## [Coursera/Princeton Algs I](https://www.coursera.org/learn/algorithms-part1)
 
 ### Assignments
-  * [Percolation](https://github.com/PedroASA/AlgsI/tree/master/Assignments/)
-  * [Deques and Randomized Queue](https://github.com/PedroASA/AlgsI/tree/master/Assignments/)
-  * [Collinear Points](https://github.com/PedroASA/AlgsI/tree/master/Assignments/)
-  * [8-Puzzle](https://github.com/PedroASA/AlgsI/tree/master/Assignments/)
-  * [Kd-Trees](https://github.com/PedroASA/AlgsI/tree/master/Assignments/)
+  * [Percolation](https://github.com/PedroASA/AlgsI/tree/master/Assignments/Percolation)
+  * [Deques and Randomized Queue](https://github.com/PedroASA/AlgsI/tree/master/Assignments/Deque)
+  * [Collinear Points](https://github.com/PedroASA/AlgsI/tree/master/Assignments/CollinearPoints)
+  * [8-Puzzle](https://github.com/PedroASA/AlgsI/tree/master/Assignments/Puzzle)
+  * [Kd-Trees](https://github.com/PedroASA/AlgsI/tree/master/Assignments/Kd-Trees)
   
 ### Interview Questions
 1. W1
