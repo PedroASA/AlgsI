@@ -12,8 +12,8 @@
 1. W1
    * Union-Find
      - [Social Connectivity](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/UnionFind/EX1)
-     - [Union Find with Max](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/Union-Find/EX2)
-     - [Union Find with Delete](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/Union-Find/EX3) ``` Incomplete! ```
+     - [Union Find with Max](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/UnionFind/EX2)
+     - [Union Find with Delete](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/UnionFind/EX3) ``` Incomplete! ```
    * Analysis of Algorithms
      - [3SUM](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex1)
      - [Bitônic Array](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex2)
