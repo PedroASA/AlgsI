@@ -2,13 +2,14 @@
 ## [Coursera/Princeton Algs I](https://www.coursera.org/learn/algorithms-part1)
 
 ### Assignments
-  1. Percolation
-  2. Deques and Randomized Queue
-  3. Collinear Points
-  4. 8-Puzzle
-  5. Kd-Trees
+  * Percolation
+  * Deques and Randomized Queue
+  * Collinear Points
+  * 8-Puzzle
+  * Kd-Trees
   
 ### Interview Questions
+<<<<<<< HEAD
 1. W1
    * Union-Find
      - [Social Connectivity](https://github.com/PedroASA/AlgsI/tree/IntQuestW1/InterviewQuestions/W1/UnionFind/EX1)
@@ -26,3 +27,5 @@
 =======
 
 >>>>>>> master-reset-2
+=======
+>>>>>>> parent of 14e8b28... Update README
