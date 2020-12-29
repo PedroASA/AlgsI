@@ -11,13 +11,13 @@
 ### Interview Questions
 1. W1
    * Union-Find
-     - [Social Connectivity](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/UnionFind/EX1)
-     - [Union Find with Max](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/UnionFind/EX2)
-     - [Union Find with Delete](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/UnionFind/EX3) ``` Incomplete! ```
+     - [Social Connectivity](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W1/UnionFind/EX1)
+     - [Union Find with Max](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W1/UnionFind/EX2)
+     - [Union Find with Delete](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W1/UnionFind/EX3) ``` Incomplete! ```
    * Analysis of Algorithms
-     - [3SUM](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex1)
-     - [Bitônic Array](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex2)
-     - [Egg Drop](https://github.com/PedroASA/AlgsI/tree/master/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex3) ``` Incomplete! ```
+     - [3SUM](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex1)
+     - [Bitônic Array](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex2)
+     - [Egg Drop](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex3) ``` Incomplete! ```
 2. W2
 3. W3
 4. W4
