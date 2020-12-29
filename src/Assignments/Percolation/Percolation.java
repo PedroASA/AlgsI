@@ -1,8 +1,5 @@
 /*
-<<<<<<< Updated upstream
-=======
 * Grade: 100/100
->>>>>>> Stashed changes
 * Correctness:  38/38 tests passed
 * Memory:       8/8 tests passed
 * Timing:       20/20 tests passed
@@ -104,10 +101,6 @@ public class Percolation {
     public boolean isFull(int row, int col) {
     	if(!(checkArgs(row-1, col-1))){throw new IllegalArgumentException();}
     	//a site is full iff it is open and connected to ts
-		/*if(percolates)
-			return (checkArgs(row-2, col-1) && isFull(row - 1, col))
-					|| (checkArgs(row-1, col) && isFull(row, col + 1))
-					|| (checkArgs(row-1, col-2) && isFull(row, col - 1));*/
 		return isOpen(row, col) && Uf2.find(ts) == Uf2.find((row-1) * N + col-1);
 	}
     // returns the number of open sites
