@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch RandomizedQueue",
+            "request": "launch",
+            "mainClass": "RandomizedQueue",
+            "projectName": "AlgsI_56538335"
+        },
+        {
+            "type": "java",
+            "name": "Launch Percolation",
+            "request": "launch",
+            "mainClass": "Percolation",
+            "projectName": "AlgsI_56538335"
+        },
+        {
+            "type": "java",
             "name": "Launch Deque",
             "request": "launch",
             "mainClass": "Deque",
@@ -15,7 +29,8 @@
             "type": "java",
             "name": "Launch Current File",
             "request": "launch",
-            "mainClass": "${file}"
+            "mainClass": "${file}",
+            "args": "${command:SpecifyProgramArgs}"
         },
         {
             "type": "java",
@@ -29,13 +44,6 @@
             "name": "Launch Permutation",
             "request": "launch",
             "mainClass": "Permutation",
-            "projectName": "AlgsI_56538335"
-        },
-        {
-            "type": "java",
-            "name": "Launch RandomizedQueue",
-            "request": "launch",
-            "mainClass": "RandomizedQueue",
             "projectName": "AlgsI_56538335"
         }
     ]
