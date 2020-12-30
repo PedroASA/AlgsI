@@ -1,9 +1,11 @@
 import edu.princeton.cs.algs4.StdRandom;
 import java.util.Iterator;
 public class RandomizedQueue<Item> implements Iterable<Item> {
+
 	private Item RQueue [];
 	private int size;
 	private int end;
+
     // construct an empty randomized queue
     public RandomizedQueue() {
     	RQueue = (Item[]) new Object[1];
@@ -21,7 +23,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     	return end;
     }
 	private void resize(int newSize) {
-		size=newSize;
+		size= size == 0 ? 1 : newSize;
 		Item[] tmp = RQueue.clone();
 		RQueue = (Item[]) new Object[size];
 		for(int i=0; i<end; i++) {
@@ -30,7 +32,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 	}
     // add the item
     public void enqueue(Item item) {
-    	if(item==null) {throw new IllegalArgumentException();}
+		if(item==null) {throw new IllegalArgumentException();}
     	if(this.end==this.size) {resize(2*size);}
     	RQueue[end]= item;
     	end++;
@@ -76,20 +78,15 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 	}
     // unit testing (required)
     public static void main(String[] args) {
-    	RandomizedQueue<String> test2 = new RandomizedQueue<String>();
-        test2.enqueue("to");
-        test2.enqueue("be");
-        test2.enqueue("or");
-        test2.enqueue("not");
-        test2.enqueue("aman");
-        test2.enqueue("agra");
-        test2.enqueue("cool");
-        Iterator<String> it = test2.iterator();
-		while(it.hasNext()) System.out.println(it.next());
-        test2.dequeue();
-        test2.dequeue();
-        test2.dequeue();
-        for(String s : test2) System.out.println(s);
+    	RandomizedQueue<Integer> rq = new RandomizedQueue<Integer>();
+		rq.isEmpty();
+		rq.size();
+		rq.size();
+		rq.size() ;
+		rq.enqueue(27);
+		rq.dequeue();
+		rq.isEmpty();
+		rq.enqueue(1);
 
 
     }

@@ -1,3 +1,11 @@
+/*
+Failed Test 6b of Memory
+Failed Test 7a of Memory
+Failed Test 8 of Memory
+Failed Test 4a-k of Memory
+Failed Test 5a-k of Memory
+Failed Test 6a-k of Memory
+*/
 import java.util.Iterator;
 
 public class Deque<Item> implements Iterable<Item> {
@@ -106,6 +114,5 @@ public class Deque<Item> implements Iterable<Item> {
     	Deque<Integer> deque = new Deque<Integer>();
         deque.addFirst(1);
         deque.removeLast();
-		//System.out.println(deque.removeFirst());
 	}
 }
