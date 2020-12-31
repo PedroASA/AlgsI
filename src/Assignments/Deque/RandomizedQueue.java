@@ -1,5 +1,9 @@
+import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
+
+import java.lang.reflect.Constructor;
 import java.util.Iterator;
+
 public class RandomizedQueue<Item> implements Iterable<Item> {
 
 	private Item RQueue [];
@@ -22,14 +26,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     public int size() {
     	return end;
     }
-	private void resize(int newSize) {
-		size= size == 0 ? 1 : newSize;
-		Item[] tmp = RQueue.clone();
-		RQueue = (Item[]) new Object[size];
-		for(int i=0; i<end; i++) {
-			RQueue[i] = tmp[i];
-		}
-	}
+	
     // add the item
     public void enqueue(Item item) {
 		if(item==null) {throw new IllegalArgumentException();}
@@ -37,7 +34,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     	RQueue[end]= item;
     	end++;
     }
-
 
     // remove and return a random item
     public Item dequeue() {
@@ -57,37 +53,76 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     	if(this.isEmpty()) {throw new java.util.NoSuchElementException();}
     	return RQueue[StdRandom.uniform(0, end)];
 	}
+
     // return an independent iterator over items in random order
     public Iterator<Item> iterator() {return new RandomQueueIterator();}
 
     private class RandomQueueIterator implements Iterator<Item>{
-    	private RandomizedQueue<Item> A= new RandomizedQueue<Item>();
+		
+		//deep copy of RQueue
+		private Item[] copy;
+		int cnt;
 
 		private RandomQueueIterator() {
-			for(int i=0; i<end; i++) {
-				A.enqueue(RQueue[i]);
-		 	}
+			copy = RQueue.clone();
+			cnt = 0;
 		}
-    	public boolean hasNext() {return !A.isEmpty();}
+
+		public boolean hasNext() {return end - cnt != 0;}
+
+		//get random unused element in array and mark it as used.
+		//To mark as used, just swap its value with cnt's as elements before cnt + 1 can no longer be selected.
+		//Avoid deletion which takes linear time considering nuber of elements in array. 
     	public Item next() {
     		if(!this.hasNext()) {throw new java.util.NoSuchElementException();}
-    		return A.dequeue();
-    	}
-    	public void remove() {throw new UnsupportedOperationException();}
+    		return sampleAndSwap();
+		}
+		
+		public void remove() {throw new UnsupportedOperationException();}
+		
+		//constant time
+		private Item sampleAndSwap() {
+			int x = StdRandom.uniform(cnt, end);
+			Item tmp = copy[x];
+			swap(x, cnt++);
+			return tmp;
+		}
+
+		private void swap(int pos1, int pos2) {
+			Item tmp = copy[pos1];
+			copy[pos1] = copy[pos2];
+			copy[pos2] = tmp;
+		}
 	}
     // unit testing (required)
     public static void main(String[] args) {
     	RandomizedQueue<Integer> rq = new RandomizedQueue<Integer>();
-		rq.isEmpty();
-		rq.size();
-		rq.size();
-		rq.size() ;
-		rq.enqueue(27);
-		rq.dequeue();
-		rq.isEmpty();
 		rq.enqueue(1);
+		rq.enqueue(2);
+		rq.enqueue(3);
+		rq.enqueue(4);
+		rq.enqueue(5);
+		rq.enqueue(6);
+		rq.enqueue(7);
+		rq.enqueue(8);
+		StdOut.println(rq.size);
+		for(Integer i : rq) StdOut.println(i);
+		// Iterator<Integer> it = rq.iterator();
+		// while(it.hasNext()) {
+		// 	StdOut.print(it.next());
+		// }
+	}
+	
+	//resize array when end == size or end == size/4.
+	//Theta(end); where end is number of eements in RQueue.
+	private void resize(int newSize) {
+		size= size == 0 ? 1 : newSize;
+		Item[] tmp = RQueue.clone();
+		RQueue = (Item[]) new Object[size];
+		for(int i=0; i<end; i++) {
+			RQueue[i] = tmp[i];
+		}
+	}
 
-
-    }
 
 }
