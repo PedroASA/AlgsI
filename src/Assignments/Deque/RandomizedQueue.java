@@ -1,7 +1,7 @@
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
-import java.lang.reflect.Constructor;
+
 import java.util.Iterator;
 
 public class RandomizedQueue<Item> implements Iterable<Item> {
@@ -107,10 +107,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		rq.enqueue(8);
 		StdOut.println(rq.size);
 		for(Integer i : rq) StdOut.println(i);
-		// Iterator<Integer> it = rq.iterator();
-		// while(it.hasNext()) {
-		// 	StdOut.print(it.next());
-		// }
 	}
 	
 	//resize array when end == size or end == size/4.
