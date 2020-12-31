@@ -15,6 +15,6 @@ public class Permutation {
         }
         Iterator<String> it = R.iterator();
         int i=0;
-        while(it.hasNext() && i++<k) StdOut.println(it.next());
+        while(it.hasNext() && i++ <k) StdOut.println(it.next());
     }
 }
