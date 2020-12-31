@@ -39,16 +39,15 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
 
 
-
     // remove and return a random item
     public Item dequeue() {
     	if(this.isEmpty()) {throw new java.util.NoSuchElementException();}
-    	int x =StdRandom.uniform(0, end);
+    	int x = StdRandom.uniform(0, end);
     	Item k = RQueue[x];
     	for(int i=x; i<end-1;++i) {
     		RQueue[i]=RQueue[i+1];
     	}
-		end--;
+		RQueue[--end] = null;
     	if(end == size/4) {resize(size/2);}
     	return k;
     }

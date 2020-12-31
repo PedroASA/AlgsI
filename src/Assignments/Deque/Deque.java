@@ -70,7 +70,8 @@ public class Deque<Item> implements Iterable<Item> {
 		Item tmp;
     	if(size==1) {
 			tmp=first.item; 
-			first=null;
+			first = null;
+			last = null;
 		}
     	else {
 			tmp = first.item;
