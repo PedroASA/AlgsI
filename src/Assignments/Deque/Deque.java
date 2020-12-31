@@ -10,8 +10,7 @@ import java.util.Iterator;
 
 public class Deque<Item> implements Iterable<Item> {
 	
-	private Node first;
-	private Node last;
+	private Node first, last;
 	private int size;
 
 	private class Node {
@@ -33,11 +32,12 @@ public class Deque<Item> implements Iterable<Item> {
 	}
     // add the item to the front
     public void addFirst(Item item) {
-    	if(item ==null) {throw new IllegalArgumentException();}
-    	if(size==0) {
-    		first=new Node();
-    		first.item=item;
-    		last=first;}
+    	if(item == null) {throw new IllegalArgumentException();}
+    	if(size == 0) {
+    		first = new Node();
+    		first.item = item;
+			last = first;
+		}
     	else {
     		Node tmp = first;
     		first= new Node();
@@ -68,7 +68,10 @@ public class Deque<Item> implements Iterable<Item> {
     public Item removeFirst() {
     	if(this.isEmpty()) {throw new java.util.NoSuchElementException();}
 		Item tmp;
-    	if(size==1) {tmp=first.item; first=null;}
+    	if(size==1) {
+			tmp=first.item; 
+			first=null;
+		}
     	else {
 			tmp = first.item;
 			first = first.next;
@@ -82,15 +85,16 @@ public class Deque<Item> implements Iterable<Item> {
 		if(this.isEmpty()) {throw new java.util.NoSuchElementException();}
     	Item tmp;
 		if(size==1) {
-			tmp=last.item; 
-			last=null;
+			tmp = last.item; 
+			last = null;
+			first = null;
 		}
 		else {
 			tmp = last.item;
 			last = last.prev;
 			last.next = null;
-			size--;
 		}
+		size--;
     	return tmp;
 	}
     // return an iterator over items in order from front to back
@@ -112,7 +116,10 @@ public class Deque<Item> implements Iterable<Item> {
     // unit testing (required)
     public static void main(String[] args) {
     	Deque<Integer> deque = new Deque<Integer>();
-        deque.addFirst(1);
-        deque.removeLast();
+		deque.addFirst(1);
+		deque.removeLast();
+		deque.addFirst(1);
+		deque.addFirst(2);
+		deque.removeFirst();
 	}
 }
