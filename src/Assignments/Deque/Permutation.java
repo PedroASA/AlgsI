@@ -1,3 +1,7 @@
+/*
+Failed Test3 (Bonus Memory Test)
+*/
+
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 import java.util.Iterator;
@@ -11,6 +15,6 @@ public class Permutation {
         }
         Iterator<String> it = R.iterator();
         int i=0;
-        while(it.hasNext() && i++<k) StdOut.println(it.next());
+        while(it.hasNext() && i++ <k) StdOut.println(it.next());
     }
 }
