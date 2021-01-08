@@ -19,6 +19,14 @@
      - [Bitônic Array](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex2)
      - [Egg Drop](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex3) ``` Incomplete! ```
 2. W2
+   * Stacks and Queues
+     - [Queue with two Stacks](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/StacksandQueues/Ex1)
+     - [Stack with max](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/StacksandQueues/Ex2)
+     - [Java Generics](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/StacksandQueues/Ex3)  ``` Incomplete! ```
+   * Elementary Sorts
+     - [Intersection of two Sets](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/Sorting/Ex1)
+     - [Permutation](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/Sorting/Ex2)
+     - [Dutch National Flag](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/Sorting/Ex3)  ``` Incomplete! ```
 3. W3
 4. W4
 5. W5
