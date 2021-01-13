@@ -94,13 +94,8 @@ public class Point implements Comparable<Point> {
      */
     public Comparator<Point> slopeOrder() {
         /* YOUR CODE HERE */
-        //Comparator<Point> C = Comparator.comparing(Point::slopeTo(this));
         Comparator<Point> c = (Point p1, Point p2) ->
-                (p1.slopeTo(this) ==p2.slopeTo(this) ? 0 : (p1.slopeTo(this) - p2.slopeTo(this) >0? 1 : -1));
-        //{if (p1.slopeTo(this) > p2.slopeTo(this)) {
-        //    return 1;
-        //}
-        //else return -1;};
+                (p1.slopeTo(this) == p2.slopeTo(this) ? 0 : (p1.slopeTo(this) - p2.slopeTo(this) > 0 ? 1 : -1));
         return c;
     }
 
@@ -126,7 +121,6 @@ public class Point implements Comparable<Point> {
         Point p2= new Point(32, 232);
         Point p3= new Point(2, 5);
         System.out.println(p1.slopeOrder().compare(p2, p2));
-        System.out.println(p2.compareTo(p2));
         System.out.println(p2.slopeTo(p2));
         System.out.println(p3.slopeTo(p2));
         System.out.println(p1.slopeTo(p3));

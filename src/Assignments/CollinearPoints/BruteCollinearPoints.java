@@ -6,7 +6,7 @@ import edu.princeton.cs.algs4.In;
 
 
 public class BruteCollinearPoints {
-    private ArrayList<LineSegment> A;
+    private final ArrayList<LineSegment> A;
 
     private Point[] check(Point A, Point B, Point C, Point D) {
         Point[] P = new Point[4];
@@ -22,8 +22,7 @@ public class BruteCollinearPoints {
     public BruteCollinearPoints(Point[] points) {
         if(points ==null) {throw new IllegalArgumentException();}
         ArrayList<Double> As;
-        A= new ArrayList<LineSegment>();
-        ArrayList<Integer> K = new ArrayList<Integer>();
+        A = new ArrayList<LineSegment>();
         Arrays.sort(points);
         Point[] x;
 
