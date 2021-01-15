@@ -1,75 +1,91 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.In;
 
 public class FastCollinearPoints {
-    private ArrayList<LineSegment> A;
+    private final ArrayList<LineSegment> segments;
 
-    private Point max(Point ... p) {
-        Point Max = new Point(Integer.MIN_VALUE,Integer.MIN_VALUE);
+    //find begin and end of line segment
+    private void add(ArrayList<Point> p) {
+        Point max = new Point(Integer.MIN_VALUE,Integer.MIN_VALUE);
+        Point min = new Point(Integer.MAX_VALUE,Integer.MAX_VALUE);
+
         for(Point i : p) {
-            if(Max.compareTo(i) < 0) {
-                Max =i;
+            if(max.compareTo(i) < 0) {
+                max =i;
+            }
+            if(min.compareTo(i) > 0) {
+                min =i;
             }
         }
-        return Max;
+
+        // Only add segment if current point is maximal, i.e, the limit of the LineSegment.
+        // Avoid inserting subsegments.
+        if(p.get(0) == min)
+            segments.add(new LineSegment(min, max));
     }
-    private Point min(Point ... p) {
-        Point Min = new Point(Integer.MAX_VALUE,Integer.MAX_VALUE);
-        for(Point i : p) {
-            if(Min.compareTo(i) > 0) {
-                Min =i;
-            }
-        }
-        return Min;
-    }
-    private boolean comp(double x, double y, double z) {
-        return (x==y ? x==z : false);
-    }
-    private Point[] check(Point A, Point B, Point C) {
-        Point[] P = new Point[3];
-        if (A != null && B != null && C != null) {
-            P[0] =A; P[1] =B; P[2] =C;
-            return P;
-        }
-        throw new IllegalArgumentException();
-    }
+
+    // finds all line segments containing 4 or more points
     public FastCollinearPoints(Point[] points)   {
-        if(points ==null) {throw new IllegalArgumentException();}
-        A=new ArrayList<LineSegment>();
-        Arrays.sort(points);
-        ArrayList<Double> aux;
-        ArrayList<Integer> K= new ArrayList<Integer>();
-        Point w;
-        Point[] x;
-        double slope, slabs;
-        if(points[0]==null) {throw new IllegalArgumentException();}
-        for(int i=0; i< points.length-1; i++) {
-            if(K.contains(i)) continue;
-            w=points[i];
-            aux =new ArrayList<Double>();
-            Arrays.sort(points, i+1, points.length,w.slopeOrder());
-            for(int k=i+1; k< points.length -2; k++) {
-                x=check(points[k], points[k+1], points[k+2]);
-                slope = x[0].slopeTo(w);
-                if(comp(slope, x[1].slopeTo(w), x[2].slopeTo(w))) {
-                    if(!aux.contains(slope)) {
-                        A.add(new LineSegment(min(x[0], x[1], x[2], w), max(x[0], x[1], x[2], w)));
-                        aux.add(slope);
-                        K.add(k);
-                    }
-                }
+        if(points == null) {throw new IllegalArgumentException();}
+
+        for(int i=0; i< points.length; i++)
+            if(points[i] == null) throw new IllegalArgumentException();
+            
+        for(int i=0; i< points.length; i++)
+            for(int j=i+1; j< points.length; j++) 
+                if(points[i].compareTo(points[j]) == 0) throw new IllegalArgumentException();
+
+
+        segments = new ArrayList<LineSegment>();
+        Point[] by_slopeTo = points.clone();
+        double slope;
+
+        /*
+        
+        - Think of p as the origin.
+        - For each other point q, determine the slope it makes with p.
+        - Sort the points according to the slopes they makes with p.
+        - Check if any 3 (or more) adjacent points in the sorted order have equal slopes with respect to p. If so, these points, together with p, are collinear.
+        
+        */
+
+        for(int p=0; p< points.length; p++) {
+            Point curr = points[p];
+
+            // sort whole array by slopeTo(curr)
+            Arrays.sort(by_slopeTo, 0, by_slopeTo.length, curr.slopeOrder());
+        
+            // check whole array to avoid subsegments. 
+            for(int q=0; q< by_slopeTo.length;) {
+                slope = by_slopeTo[q].slopeTo(curr);
+        
+                ArrayList<Point> pts = new ArrayList<Point>(Arrays.asList(curr, by_slopeTo[q++]));
+        
+                // Get all points in this line.
+                while(q < by_slopeTo.length && by_slopeTo[q].slopeTo(curr) == slope) 
+                    pts.add(by_slopeTo[q++]);
+        
+                //At least 4 collinear points. 
+                if(pts.size() >= 4) 
+                    add(pts);
             }
         }
-    } // finds all line segments containing 4 or more points
-    public           int numberOfSegments()    {
-        return A.size();// the number of line segments
+    } 
+    
+    // the number of line segments
+    public int numberOfSegments()    {
+        return segments.size();
     }
+
+    // the line segments
     public LineSegment[] segments()   {
-        return A.toArray(new LineSegment[A.size()]);// the line segments
+        return segments.toArray(new LineSegment[numberOfSegments()]);
     }
+
     public static void main(String[] args) {
 
         // read the n points from a file
@@ -97,6 +113,7 @@ public class FastCollinearPoints {
             StdOut.println(segment);
             segment.draw();
         }
+
         StdDraw.show();
     }
 }

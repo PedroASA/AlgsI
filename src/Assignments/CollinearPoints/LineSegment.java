@@ -1,3 +1,15 @@
+/*************************************************************************
+ *  Compilation:  javac LineSegment.java
+ *  Execution:    none
+ *  Dependencies: Point.java
+ *
+ *  An immutable data type for Line segments in the plane.
+ *  For use on Coursera, Algorithms Part I programming assignment.
+ *
+ *  DO NOT MODIFY THIS CODE.
+ *
+ *************************************************************************/
+
 public class LineSegment {
     private final Point p;   // one endpoint of this line segment
     private final Point q;   // the other endpoint of this line segment
@@ -18,9 +30,9 @@ public class LineSegment {
         this.q = q;
     }
 
-
+    
     /**
-     * Draws this line segment to standard draw.'
+     * Draws this line segment to standard draw.
      */
     public void draw() {
         p.drawTo(q);
@@ -50,3 +62,4 @@ public class LineSegment {
     }
 
 }
+

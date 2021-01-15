@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Comparator;
 import edu.princeton.cs.algs4.StdDraw;
 
@@ -59,7 +58,7 @@ public class Point implements Comparable<Point> {
         if (this.y == that.y) {
             return 0.0;
         }
-        return (double)(this.y-that.y)/ (this.x - that.x);
+        return (this.y-that.y) * 1.0 / (this.x - that.x);
         /* YOUR CODE HERE */
     }
 
@@ -94,9 +93,9 @@ public class Point implements Comparable<Point> {
      */
     public Comparator<Point> slopeOrder() {
         /* YOUR CODE HERE */
-        Comparator<Point> c = (Point p1, Point p2) ->
-                (p1.slopeTo(this) == p2.slopeTo(this) ? 0 : (p1.slopeTo(this) - p2.slopeTo(this) > 0 ? 1 : -1));
-        return c;
+        return (Point p1, Point p2) ->
+                p1.slopeTo(this) == p2.slopeTo(this) ? 0
+                        : (p1.slopeTo(this) - p2.slopeTo(this) > 0 ? 1 : -1);
     }
 
 
@@ -117,20 +116,21 @@ public class Point implements Comparable<Point> {
      */
     public static void main(String[] args) {
         /* YOUR CODE HERE */
-        Point p1= new Point(335, 423);
-        Point p2= new Point(32, 232);
-        Point p3= new Point(2, 5);
-        System.out.println(p1.slopeOrder().compare(p2, p2));
-        System.out.println(p2.slopeTo(p2));
-        System.out.println(p3.slopeTo(p2));
+        Point p1= new Point(14000, 10000);
+        Point p2= new Point(21000, 10000);
+        Point p3= new Point(32000, 10000);
+
+        System.out.println(p1.slopeTo(p2));
         System.out.println(p1.slopeTo(p3));
-        Point[] p={p1,p2,p3, new Point(0,0)};
-        for(Point x : p) {
-            System.out.println(x);
-        }
-        Arrays.sort(p, p1.slopeOrder());
-        for(Point x : p) {
-            System.out.println(x);
-        }
+        System.out.println(p1.slopeTo(p3) == p1.slopeTo(p2));
+    //     Point[] p={p1,p2,p3, new Point(0,0)};
+    //     for(Point x : p) {
+    //         System.out.println(x);
+    //     }
+    //     Arrays.sort(p, p1.slopeOrder());
+    //     for(Point x : p) {
+    //         System.out.println(x);
+    //     }
+    // }
     }
 }
