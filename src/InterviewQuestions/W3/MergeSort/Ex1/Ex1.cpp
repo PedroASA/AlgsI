@@ -7,13 +7,27 @@ using namespace std;
 
 using Numbers = vector<int>;
 
-Numbers merge(Numbers& v1, Numbers& v2) {
+inline bool is_sorted(Numbers::iterator begin, Numbers::iterator end) {
+    for(;begin != end - 1; begin++) {
+        if(*begin > *(begin + 1)) return false;
+        //cout << *begin << "\t";
+    }
+    cout << endl; 
+    return true;
+}
 
-    Numbers aux = Numbers(v1.begin(), v1.end());
-    Numbers::iterator it1 = v1.begin(), it2 = v2.begin(), it_aux = aux.begin();
+void merge( Numbers::iterator it1, Numbers::iterator it2, Numbers::iterator it3) {
+    
+    assert(is_sorted(it1, it2));
+    assert(is_sorted(it2, it3));
 
-    while(it1 != v1.end()) {
-        if(*it_aux < *it2) {
+    Numbers v = Numbers(it1, it2);
+    for(auto t : v) cout << t << "\t";
+    cout << endl;
+    auto it_aux = v.begin(), mid = it2;
+
+    while(it1 < mid) {
+        if(it_aux < v.end()  && *it_aux < *it2) {
             *it1 = *it_aux;
             it1++;it_aux++;
         } 
@@ -22,37 +36,34 @@ Numbers merge(Numbers& v1, Numbers& v2) {
             it2++;it1++;
         }
     }
-    while(it2 != v2.end()) {
-        if(*it_aux < *it1) {
-            *it2 = *it_aux;
-            it2++;it_aux++;
+    while(it1 < it3) {
+        if(it_aux < v.end()  && *it_aux < *it2) {
+            *it1 = *it_aux;
+            it1++;it_aux++;
         } 
         else { 
             *it2 = *it1;
-            it2++;it1++;
+            it1++;it2++;
         }
     }
-    return Numbers(v1.begin(), v2.end());
-
 
 }
 
 
-Numbers merge_sort(Numbers::iterator begin, Numbers::iterator end) {
+void merge_sort( const Numbers::iterator begin, const Numbers::iterator end) {
     if(begin + 1 < end) {
+        auto t1 = end - begin;
         auto mid = begin + (end - begin)/ 2;
-        auto nums1 = merge_sort(begin, mid);
-        auto nums2 = merge_sort(mid, end);
-        return merge(nums1, nums2);
+        merge_sort(begin, mid);
+        merge_sort(mid, end);
+        merge(begin, mid, end);
+        assert(t1 == end - begin);
     }
 
-    if(begin != end) 
-        return Numbers { *begin };
-    
-    return Numbers {};
 }
 
 int main() {
     Numbers a {9, 2, 3, 10, 9, 8, 5, 3, 2, 3, 2, 1, 0, 9, 5, 5, 5, 9, 3, 4, 2, 2, 8, 6, 6};
-    for(auto i = ) cout << x << "\t";
+    merge_sort(a.begin(), a.end());
+    for(auto& x : a ) cout << x << "\t";
 }
