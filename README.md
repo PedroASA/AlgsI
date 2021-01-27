@@ -29,11 +29,11 @@
      - [Dutch National Flag](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/ElementarySorts/Ex3)  ``` Incomplete! ```
 3. W3
     * Merge Sort
-      - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/MergeSort/Ex1)
-      - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/MergeSort/Ex2)
-      - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/MergeSort/Ex3)  ``` Incomplete! ```
+      - [Merging with smaller auxiliary array](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/MergeSort/Ex1)
+      - [Counting inversions](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/MergeSort/Ex2)
+      - [Shuffling a linked list](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/MergeSort/Ex3)  ``` Incomplete! ```
    * Quick Sort
-     - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex1)  ``` Incomplete! ```
+     - [Nuts and bolts](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex1)  ``` Incomplete! ```
      - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex2)  ``` Not Created! ```
      - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex3)  ``` Not Created! ```
 4. W4
