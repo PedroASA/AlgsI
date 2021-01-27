@@ -102,7 +102,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 		private Item arr [];
 		private int end;
 		private int size;
-	
+
+		@SuppressWarnings("unchecked")
 		public DeletableArray(int size) {
 			this.arr = (Item[]) new Object[size];
 			this.end = size;
@@ -134,6 +135,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
 		//resize array when end = size or end = size/4.
 		//Time Complexity: Theta(end); where end is number of elements in RQueue.
+		@SuppressWarnings("unchecked")
 		private void resize(int newSize) {
 			size= size == 0 ? 1 : newSize;
 			Item[] tmp = arr.clone();

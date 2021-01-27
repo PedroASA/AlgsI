@@ -11,34 +11,34 @@ Numbers merge(Numbers& v1, Numbers& v2) {
     Numbers res {};
     Numbers::iterator it1 = v1.begin(), it2 = v2.begin();
 
-    //cout << res.size() << endl;
-    while(it1 != v1.end() && it2 != v2.end()) {
-        if(*it1 < *it2) {
+    while(it1 != v1.end() && it2 != v2.end()) 
+
+        if(*it1 < *it2) 
+            res.push_back(*it1++);
+        
+        else 
+            res.push_back(*it2++);
+        
+    if(it1 != v1.end()) 
+
+        for(;it1 != v1.end(); it1++) 
             res.push_back(*it1);
-            it1++;
-        } 
-        else { 
-            res.push_back(*it2);
-            it2++;
-        }
-    }
-    if(it1 != v1.end()) {
-        for(;it1 != v1.end(); it1++) {
-            res.push_back(*it1);
-        }
-    }
-    else {
-        for(;it2 != v2.end(); it2++) {
+        
+    
+    else 
+        for(;it2 != v2.end(); it2++) 
            res.push_back(*it2);
-        }
-    }
+        
+    
     return res;
 
 
 }
 
 Numbers merge_sort(Numbers::iterator begin, Numbers::iterator end) {
+    
     if(begin + 1 < end) {
+
         auto mid = begin + (end - begin)/ 2;
         auto nums1 = merge_sort(begin, mid);
         auto nums2 = merge_sort(mid, end);
