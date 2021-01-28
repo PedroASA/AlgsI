@@ -1,19 +1,20 @@
 import java.util.ArrayList;
-import edu.princeton.cs.algs4.StdRandom;
+//import edu.princeton.cs.algs4.StdRandom;
 import java.util.Arrays;
-import java.util.List;
+//import java.util.List;
 
 public class Board {
     private final int[][] board;
-    private final int n;
-    private int zeroi;
-    private int zeroj;
+    private final int n, manhattan;
+    private int zeroi, zeroj;
+
+
     // create a board from an n-by-n array of tiles,
     // where tiles[row][col] = tile at (row, col)
     public Board(int[][] tiles) {
-        //board =tiles.clone();
-        //n=board.length;
-        n= tiles.length;
+        int count = 0;
+        int k=1;
+        n = tiles.length;
         board = new int[n][n];
         for(int i=0; i<n; i++) {
             for (int j = 0; j < n; j++) {
@@ -22,19 +23,21 @@ public class Board {
                     zeroi = i;
                     zeroj = j;
                 }
+                if (board[i][j] != (k++ % (n*n)) && board[i][j]!=0) count++;
             }
         }
+        manhattan = count;
     }
     // string representation of this board
     public String toString() {
-        StringBuilder s=n + "\n";
+        StringBuilder s = new StringBuilder(n + "\n");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 s.append(board[i][j] + "\t");
             }
             s.append("\n");
         }
-        return s;
+        return s.toString();
     }
 
     // board dimension n
@@ -56,18 +59,7 @@ public class Board {
 
     // sum of Manhattan distances between tiles and goal
     public int manhattan() {
-        int sum =0;
-        int k=1;
-        for(int i=0; i<n; i++) {
-            for(int j=0; j<n; j++) {
-                int tmp = board[i][j];
-                if (tmp != k && tmp!=0) {
-                    sum += Math.abs(i - (tmp-1)/n) + Math.abs(j - ((tmp-1) %n));
-                }
-                k=(k+1) % (n*n);
-            }
-        }
-        return sum;
+        return manhattan;
     }
 
     // is this board the goal board?
