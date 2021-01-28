@@ -20,14 +20,22 @@
      - [Egg Drop](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W1/AnalysisOfAlgorithms/Ex3) ``` Incomplete! ```
 2. W2
    * Stacks and Queues
-     - [Queue with two Stacks](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/StacksandQueues/Ex1)
-     - [Stack with max](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/StacksandQueues/Ex2)
-     - [Java Generics](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/StacksandQueues/Ex3)  ``` Incomplete! ```
+     - [Queue with two Stacks](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/StacksAndQueues/Ex1)
+     - [Stack with max](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/StacksAndQueues/Ex2)
+     - [Java Generics](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/StacksAndQueues/Ex3)  ``` Incomplete! ```
    * Elementary Sorts
-     - [Intersection of two Sets](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/Sorting/Ex1)
-     - [Permutation](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/Sorting/Ex2)
-     - [Dutch National Flag](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/Sorting/Ex3)  ``` Incomplete! ```
+     - [Intersection of two Sets](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/ElementarySorts/Ex1)
+     - [Permutation](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/ElementarySorts/Ex2)
+     - [Dutch National Flag](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W2/ElementarySorts/Ex3)  ``` Incomplete! ```
 3. W3
+    * Merge Sort
+      - [Merging with smaller auxiliary array](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/MergeSort/Ex1)
+      - [Counting inversions](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/MergeSort/Ex2)
+      - [Shuffling a linked list](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/MergeSort/Ex3)  ``` Incomplete! ```
+   * Quick Sort
+     - [Nuts and bolts](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex1)  ``` Incomplete! ```
+     - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex2)  ``` Not Started! ```
+     - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex3)  ``` Not Started! ```
 4. W4
 5. W5
 6. W6
