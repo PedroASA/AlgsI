@@ -1,7 +1,6 @@
 import java.util.ArrayList;
-//import edu.princeton.cs.algs4.StdRandom;
+import edu.princeton.cs.algs4.In;
 import java.util.Arrays;
-//import java.util.List;
 
 public class Board {
     private final int[][] board;
@@ -16,14 +15,14 @@ public class Board {
         int k=1;
         n = tiles.length;
         board = new int[n][n];
-        for(int i=0; i<n; i++) {
+        for(int i = 0; i< n; i++) {
             for (int j = 0; j < n; j++) {
                 board[i][j]=tiles[i][j];
                 if (board[i][j] == 0) {
                     zeroi = i;
                     zeroj = j;
                 }
-                if (board[i][j] != (k++ % (n*n)) && board[i][j]!=0) count++;
+                if (board[i][j] != (k++ % (n*n)) && board[i][j]!=0) count += Math.abs(i -  (board[i][j] - 1) / n ) +  Math.abs(j - (board[i][j] - 1) % n) ;
             }
         }
         manhattan = count;
@@ -56,6 +55,7 @@ public class Board {
         }
         return count;
     }
+
 
     // sum of Manhattan distances between tiles and goal
     public int manhattan() {
@@ -133,25 +133,14 @@ public class Board {
 
     // unit testing (not graded)
     public static void main(String[] args) {
-        int[][] t = {{0,1,3}, {4, 2, 5}, {7, 8, 6}};
-        Board B = new Board(t);
-        System.out.println(B);
-        System.out.println(B.manhattan());
-        /*System.out.println(B.dimension());
-        System.out.println(B.twin());
-        System.out.println(B.hamming());
-        System.out.println(B.manhattan());
-        System.out.println(B.neighbors());*/
-        //t[0][0] =1;
-        //t[0][1]=0;
-        //t[2][2]=6;
-        //t[1][1]=1;
-        /*Board A = new Board(t);
-        System.out.println("sdkfglsdgf\n");
-        System.out.println(A);
-        //System.out.println(A.twin());
-        System.out.println(A.manhattan());
-        System.out.println(B.equals(A));*/
+        In in = new In(args[0]);
+        int n = in.readInt();
+        int[][] tiles = new int[n][n];
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < n; j++)
+                tiles[i][j] = in.readInt();
+        Board initial = new Board(tiles);
+        System.out.println(initial.manhattan());
     }
 
 }

@@ -10,16 +10,19 @@ public class Solver {
 
     private class SN implements Comparable<SN>{
         Board B;
-        int moves;
+        int moves, manhattan;
         SN prev;
         private SN(Board B, int n, SN prev) {
-            this.B=B;
-            this.moves=n;
-            this.prev =prev;
+            this.B = B;
+            this.moves = n;
+            this.prev = prev;
+            this.manhattan = B.manhattan();
         }
+        
         public int compareTo(SN s) {
-            return (this.B.manhattan() - s.B.manhattan()) + (this.moves - s.moves);
-            //return (this.B.hamming() + this.moves - s.B.hamming() + s.moves);
+            int man = this.manhattan - s.manhattan;
+            int mov = this.moves - s.moves;
+            return man + mov == 0 ? man : man + mov;
         }
     }
     private boolean solvable;
@@ -104,8 +107,6 @@ public class Solver {
 
     // test client (see below)
     public static void main(String[] args) {
-
-        StdOut.println(args[0]);
 
         // create initial board from file
         In in = new In(args[0]);
