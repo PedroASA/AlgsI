@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Board {
-    private int[][] board;
-    private int n;
+    private final int[][] board;
+    private final int n;
     private int zeroi;
     private int zeroj;
     // create a board from an n-by-n array of tiles,
@@ -27,12 +27,12 @@ public class Board {
     }
     // string representation of this board
     public String toString() {
-        String s=n + "\n";
+        StringBuilder s=n + "\n";
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                s+=board[i][j] + "\t";
+                s.append(board[i][j] + "\t");
             }
-            s+= "\n";
+            s.append("\n");
         }
         return s;
     }
@@ -48,7 +48,6 @@ public class Board {
         int k=1;
         for(int i=0; i<n; i++) {
             for (int j = 0; j < n; j++) {
-                //if(board[i][j]==0) continue;
                 if (board[i][j] != (k++ % (n*n)) && board[i][j]!=0) count++;
             }
         }
@@ -76,7 +75,6 @@ public class Board {
         int val = 1;
         for(int i=0; i<n; i++) {
             for (int j = 0; j < n; j++) {
-                //System.out.println(board[i][j]+"\t"+val % (n*n));
                 if (board[i][j] != (val++ % (n*n))) return false;
 
             }
@@ -92,10 +90,13 @@ public class Board {
         Board that = (Board) y;
         return this.toString().equals(that.toString());
     }
+
+
     private boolean inBounds(int x) {
         if(x >=n || x < 0 ) return false;
         return true;
     }
+
     private int[][] deepCopy(int[][] original) {
         final int[][] result = new int[original.length][];
         for (int i = 0; i < original.length; i++) {
@@ -103,6 +104,7 @@ public class Board {
         }
         return result;
     }
+    
     private Board exch(int row, int col, int rshift, int cshift) {
         if(inBounds(row + rshift) && inBounds(col + cshift)) {
             int[][] tile = deepCopy(board);
@@ -117,7 +119,6 @@ public class Board {
     // all neighboring boards
     public Iterable<Board> neighbors() {
         ArrayList<Board> A = new ArrayList<Board>();
-        int[][] tile = deepCopy(board);
         Board x= exch(zeroi, zeroj, 1, 0);
         if(x != null )A.add(x);
         x=exch(zeroi, zeroj, 0, 1);
