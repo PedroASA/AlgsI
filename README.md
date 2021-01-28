@@ -34,8 +34,8 @@
       - [Shuffling a linked list](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/MergeSort/Ex3)  ``` Incomplete! ```
    * Quick Sort
      - [Nuts and bolts](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex1)  ``` Incomplete! ```
-     - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex2)  ``` Not Created! ```
-     - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex3)  ``` Not Created! ```
+     - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex2)  ``` Not Started! ```
+     - [](https://github.com/PedroASA/AlgsI/tree/master/src/InterviewQuestions/W3/QuickSort/Ex3)  ``` Not Started! ```
 4. W4
 5. W5
 6. W6
