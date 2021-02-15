@@ -160,12 +160,12 @@ public class KdTree {
         }
         return min;
     }
-    public Point2D nearest(Point2D p)       {
-        if(p == null) throw new IllegalArgumentException();
+    public Point2D nearest(Point2D pnt)       {
+        if(pnt == null) throw new IllegalArgumentException();
         if(size==0) return null;
         Node min=Root;
-        double dist=min.p.distanceSquaredTo(p);
-        min = searchNear(Root, p, dist, min);
+        double dist=min.p.distanceSquaredTo(pnt);
+        min = searchNear(Root, pnt, dist, min);
         return min.p;
     }// a nearest neighbor in the set to point p; null if the set is empty
     public static void main(String[] args) {
