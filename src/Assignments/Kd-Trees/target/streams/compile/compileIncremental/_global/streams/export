@@ -1,1 +1,0 @@
-scalac -bootclasspath /home/pedro/.sbt/boot/scala-2.12.10/lib/scala-library.jar -classpath /home/pedro/Documentos/JavaProgs/Percolate/Kd-Trees/target/scala-2.12/classes /home/pedro/Documentos/JavaProgs/Percolate/Kd-Trees/Hello.scala
