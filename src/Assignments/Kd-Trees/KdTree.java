@@ -110,21 +110,27 @@ public class KdTree {
         ArrayList<Point2D> A = new ArrayList<Point2D>();
         searchRange(rect, Root, A);
         return A;
-    }       
+    }
+          
     private Node searchNear(Node root, Point2D pnt, double min_dist, Node min) {
         if (root != null) {
             double dist = root.rect.distanceSquaredTo(pnt);
-            Node x, y;
+            Node tmp;
             if (dist <= min_dist) {
+                dist = root.p.distanceSquaredTo(pnt);
+                if(dist <= min_dist) {
+                    min_dist = dist;
+                    min = root;
+                }
                 boolean c = root.left != null ? root.left.rect.contains(pnt) : false;
-                x = searchNear(c ? root.left : root.right, pnt, min_dist, min);
-                dist = x.p.distanceSquaredTo(pnt);
+                tmp = searchNear(c ? root.left : root.right, pnt, min_dist, min);
+                dist = tmp.p.distanceSquaredTo(pnt);
                 if(dist < min_dist) {
                     min_dist = dist;
-                    min = x;
+                    min = tmp;
                 }
-                y = searchNear(c ? root.right : root.left, pnt, min_dist, min);
-                if(y.p.distanceSquaredTo(pnt) < min_dist) min = y;
+                tmp = searchNear(c ? root.right : root.left, pnt, min_dist, min);
+                if(tmp.p.distanceSquaredTo(pnt) < min_dist) min = tmp;
             }
         }
         return min;
