@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.Point2D;
 import edu.princeton.cs.algs4.RectHV;
+import edu.princeton.cs.algs4.Stack;
+import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
 public class KdTree {
@@ -13,7 +15,7 @@ public class KdTree {
     private static final int ymax = 1;
 
     private static class Node {
-        private Point2D p;      // the point
+        private final Point2D p;      // the point
         private RectHV rect;    // the axis-aligned rectangle corresponding to this node
         private Node left;        // the left/bottom subtree
         private Node right;        // the right/top subtree       
@@ -46,7 +48,6 @@ public class KdTree {
 
     private boolean search(Node node, Point2D pnt, int level) {
         if(node == null) return false;
-        //System.out.println(node.rect + "\t" + node.p);
         if(node.p.compareTo(pnt)==0) return true;
         boolean cmp = (level++ % 2==0) ? node.p.x() > pnt.x() : node.p.y() > pnt.y();
         if(cmp) return search(node.left, pnt, level);
@@ -95,7 +96,24 @@ public class KdTree {
         return search(Root, p, 0);
     }      
     // draw all points to standard draw
-    public void draw() {}
+    public void draw() {
+        Stack<Node> st = new Stack<>();
+        st.push(Root);
+        Node curr; 
+        Integer t = 0;
+        while(!st.isEmpty()) {
+            curr = st.pop();
+            StdDraw.setPenColor(StdDraw.BLACK);
+            StdDraw.setPenRadius(.01);
+            StdDraw.text(curr.p.x(), curr.p.y(), t.toString());;
+            StdDraw.setPenColor(StdDraw.RED);
+            StdDraw.setPenRadius();
+            curr.rect.draw();
+            if(curr.left != null)st.push(curr.left);
+            if(curr.right != null)st.push(curr.right);
+            t++;
+        }
+    }
                 
     private void searchRange(RectHV rect, Node root, ArrayList<Point2D> A) {
         if(root!=null && rect.intersects(root.rect)) {
@@ -105,31 +123,33 @@ public class KdTree {
         }
     }
     // all points that are inside the rectangle (or on the boundary)
-    public Iterable<Point2D> range(RectHV rect)      {
+    public Iterable<Point2D> range(RectHV rect) {
         if(rect == null) throw new IllegalArgumentException();
         ArrayList<Point2D> A = new ArrayList<Point2D>();
         searchRange(rect, Root, A);
         return A;
     }
           
-    private Node searchNear(Node root, Point2D pnt, double min_dist, Node min) {
+    private Node searchNear(Node root, Point2D pnt, double min_dist, Node min, boolean horizontal) {
         if (root != null) {
             double dist = root.rect.distanceSquaredTo(pnt);
             Node tmp;
-            if (dist <= min_dist) {
+            if (dist < min_dist) {
                 dist = root.p.distanceSquaredTo(pnt);
-                if(dist <= min_dist) {
+                if(dist < min_dist) {
                     min_dist = dist;
                     min = root;
                 }
-                boolean c = root.left != null ? root.left.rect.contains(pnt) : false;
-                tmp = searchNear(c ? root.left : root.right, pnt, min_dist, min);
+                boolean c = 
+                    horizontal && pnt.y() < root.p.y()
+                    || !horizontal && pnt.x() < root.p.x();
+                tmp = searchNear(c ? root.left : root.right, pnt, min_dist, min, !horizontal);
                 dist = tmp.p.distanceSquaredTo(pnt);
                 if(dist < min_dist) {
                     min_dist = dist;
                     min = tmp;
                 }
-                tmp = searchNear(c ? root.right : root.left, pnt, min_dist, min);
+                tmp = searchNear(c ? root.right : root.left, pnt, min_dist, min, !horizontal);
                 if(tmp.p.distanceSquaredTo(pnt) < min_dist) min = tmp;
             }
         }
@@ -141,7 +161,7 @@ public class KdTree {
         if(size==0) return null;
         Node min=Root;
         double dist=min.p.distanceSquaredTo(pnt);
-        min = searchNear(Root, pnt, dist, min);
+        min = searchNear(Root, pnt, dist, min, false);
         return min.p;
     }
     // unit testing of the methods (optional)
@@ -156,7 +176,7 @@ public class KdTree {
             kdtree.insert(p);
         }
         Point2D point = new Point2D(Double.parseDouble(args[1]), Double.parseDouble(args[2]));
-        StdOut.println(kdtree.nearest(point));
+        StdOut.println("\n" + kdtree.nearest(point));
 
     }
 }
